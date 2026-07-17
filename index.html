@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProGul Game Development</title>
+<meta name="description" content="Halaman kumpulan link resmi Nama Kamu">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crt"></div>
+<div class="glow"></div>
+
+<main class="terminal">
+
+  <div class="terminal__bar">
+    <div class="terminal__dots">
+      <span class="dot dot--red"></span>
+      <span class="dot dot--yellow"></span>
+      <span class="dot dot--green"></span>
+    </div>
+    <span class="terminal__path">~/links --user=gamedev67</span>
+    <span class="terminal__status" id="clock">00:00:00</span>
+  </div>
+
+  <div class="terminal__body">
+
+    <section class="profile">
+      <div class="profile__avatar-wrap">
+        <img class="profile__avatar" src="img/pfp.png" alt="Foto profil">
+        <span class="profile__status" title="Online"></span>
+      </div>
+
+      <h1 class="profile__name">ProGul Game Development<span class="cursor">_</span></h1>
+      <p class="profile__tagline"><span id="typing"></span><span class="cursor cursor--inline">_</span></p>
+      <p class="profile__bio">Program Unggulan Game Development adalah wadah belajar dan praktik pengembangan game yang terbuka untuk umum, guna mengembangkan keterampilan dan menghasilkan proyek nyata.</p>
+    </section>
+
+    <div id="linkSections" class="sections"></div>
+
+  </div>
+
+  <footer class="terminal__footer">
+    <span>// dibuat dengan html · css · js — tanpa framework</span>
+    <span class="terminal__footer-year" id="year"></span>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
