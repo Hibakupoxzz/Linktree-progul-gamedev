@@ -22,21 +22,19 @@ const SECTIONS = [
     title: "Project Game",
     links: [
       { label: "Dinolin Adventurer 2D", desc: "Demo — Early Access", url: "https://ryuupz.itch.io/dinolin-demo", icon: "gamepad", soon: false },
-      { label: "Fox Multiplayer 3D", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: false },
+      { label: "Fallenbond", desc: "Demo — segera hadir", url: "", icon: "gamepad", soon: false },
+      { label: "Fox Multiplayer 3D", desc: "Demo — segera hadir", url: "https://ryuupz.itch.io/foxmultiplayer", icon: "gamepad", soon: false },
       { label: "Smiley Things", desc: "Demo — segera hadir", url: "https://thealvarchive.itch.io/smiley-things", icon: "gamepad", soon: false },
-      { label: "Nama Proyek 2", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: true },
-      { label: "Nama Proyek 2", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: true },
-      { label: "Nama Proyek 2", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: true },
-      { label: "Nama Proyek 2", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: true },
-      { label: "Nama Proyek 2", desc: "Demo — segera hadir", url: "#", icon: "gamepad", soon: true },
+      { label: "SMK PLUS PELITA NUSANTARA Roblox", desc: "Release", url: "https://www.roblox.com/id/games/127497633223893/SMK-PLUS-PELITA-NUSANTARA", icon: "gamepad", soon: false },
+      { label: "Strown Night", desc: "Release", url: "https://www.roblox.com/id/games/70638927837153/Strown-Night", icon: "gamepad", soon: false },
     ],
   },
-//   {
-//     title: "Website",
-//     links: [
-//       { label: "Portofolio", desc: "Lihat karya lengkap", url: "#", icon: "globe" },
-//     ],
-//   },
+  {
+    title: "Website",
+    links: [
+      { label: "PDf Demos Program Unggulan Gamedev", desc: "Lihat karya lengkap", url: "/pdf/", icon: "file-text" },
+    ],
+  },
 ];
 
 /* ==========================================================
@@ -54,6 +52,10 @@ const ICONS = {
   mail: '<path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/>',
   link: '<path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1.5-1.5"/>',
 };
+
+function iconSvg(name) {
+  return `<i data-lucide="${name}" class="icon"></i>`;
+}
 
 function iconSvg(name) {
   const paths = ICONS[name] || ICONS.link;
@@ -159,8 +161,13 @@ function startClock() {
    ========================================================== */
 document.addEventListener("DOMContentLoaded", () => {
   renderSections();
+
+  // Render semua icon Lucide
+  lucide.createIcons();
+
   startTyping();
   startClock();
+
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
